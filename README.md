@@ -1,8 +1,14 @@
-## Omni Take Home Interview
+# Omni Take Home Interview
 
-## Description
+### Goal
 
 Given an NFT collection on Rinkeby, write a user-facing application that shows the collection's most up-to-date active listings on OpenSea.
+
+### Instructions
+1. Please fork this repository into your Github as a private repository and invite me (davidlee1435)
+2. Commit your changes to your fork
+
+### More information
 
 For simplicity, assume that we only want to see listings on items where the seller has set the price (as opposed to listings on items where the seller takes the price, i.e. an auction). The information per-listing you want to show to the user is up to you, but at the bare minimum, the UI should show the price and the name of the NFT.
 
