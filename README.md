@@ -7,7 +7,9 @@ Given this NFT collection on Goerli, use the [OpenSea Stream API](https://docs.o
 The output of the program should be a continuous log of price changes that includes the timestamp, the old floor price, the new floor price, and the reason for the change
 
 ```
-$ <command> 
+$ <command> <slug of the NFT collection>
+Showing floor prices for <slug of the NFT collection>!
+
 [11-11-2022 1:10:55PM] 1 ETH -> 1.1 ETH (New listing created)
 [11-11-2022 1:10:58PM] 1.1 ETH -> 1.5 ETH (Previous floor listing cancelled)
 [11-11-2022 1:11:05PM] 1.5 ETH -> 1.0 ETH (Previous floor listing sold)
@@ -21,15 +23,19 @@ $ <command>
 ### More information
 
 **About NFTs**
+
 An NFT collection is a smart contract that issues a finite number of tokens, each of which can be listed to sell for a fixed price. The floor listing is the lowest-priced listing that is available for purchase at time t, and the floor price of a collection is the price of such listing. Note that cancelled or previously sold listings do not affect the floor price of a collection at time T.
 
 A listing is available for sale if:
-1. The `is_private` is false
+1. `is_private` is false
 2. The `listing_type` is not null and not `dutch`
 3. The listing's expiration time has not passed
 
 **About the OpenSea Stream API**
+
 The OpenSea Stream API is a Websocket-based API that emits events (including listing creations, listing cancellations, and sales) to listeners of the stream. You can read more about it [here](https://docs.opensea.io/reference/stream-api-overview). Note: you don't need an API key to use the Stream on testnet.
+
+The Stream API lets you listen to specific collections by passing in their slugs. A slug on OpenSea is the last part of the collection's OpenSea URL. For example, the slug for [Multifaucet NFT V3](https://testnets.opensea.io/collection/multifaucet-nft-v3), which we recommend you use, is `multifaucet-nft-v3`. 
 
 Here are some helpful things to note about the schema of events that are sent to listeners:
 
@@ -37,7 +43,10 @@ Here are some helpful things to note about the schema of events that are sent to
 
 You are free to use any languages/technologies/frameworks that you would like to achieve this task. OpenSea does have a [Javascript client](https://github.com/ProjectOpenSea/stream-js) that you are free to use as well.
 
+Although not required, we strongly recommend testing end-to-end on https://testnets.opensea.io by purchasing and listing NFTs. Please refer to the [OpenSea documentation](https://opensea.io/learn) to familiarize yourself with crypto wallets, the purchasing process, and the listing process. You can get test NFTs and testnet ETH from https://faucet.paradigm.xyz/; if you don't have a Twitter account, let us know and we could send some to an address of your choosing.
+
 **Due Date**
+
 The due date for this project is 1 week from when you were invited to the repo, but it should not take more than 8 hours of your time. After the due date, we will review the code and schedule a 30 minute chat to walk through your design decisions, tradeoffs, and how you would scale this.
 
 If you have any questions, please do not hesitate to ask!
