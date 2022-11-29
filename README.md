@@ -2,7 +2,7 @@
 
 ### Goal
 
-Given [this NFT collection](https://testnets.opensea.io/collection/multifaucet-nft-v3) on Goerli, use the [OpenSea Stream API](https://docs.opensea.io/reference/stream-api-overview) to write a program that listens to listing creations, listing cancellations and sales to calculate the floor price in ETH for the collection.
+Given [this NFT collection](https://testnets.opensea.io/collection/multifaucet-nft-v3) on Goerli, use the [OpenSea Stream API](https://docs.opensea.io/reference/stream-api-overview) to write a program that listens to listing creations, listing cancellations and sales to display the most up-to-date floor price in ETH for the collection.
 
 The output of the program should be a continuous log of price changes that includes the timestamp, the old floor price, the new floor price, and the reason for the change
 
